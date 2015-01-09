@@ -29,7 +29,7 @@
 }
 @end
 
-#if !DEBUG
+//#if !DEBUG
 
 @interface PerformanceTests : RLMTestCase
 @end
@@ -167,7 +167,7 @@
 }
 
 - (void)testEnumerateAndMutate {
-    RLMRealm *realm = [self createStringObjects:1];
+    RLMRealm *realm = [self createStringObjects:10];
 
     [self measureBlock:^{
         [realm beginWriteTransaction];
@@ -309,4 +309,4 @@
 
 @end
 
-#endif
+//#endif
